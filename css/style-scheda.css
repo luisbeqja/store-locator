@@ -1,0 +1,1146 @@
+@charset "UTF-8";
+
+/*colori
+
+*/
+/*font
+
+*/
+/*variabili*/
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --fontDefault: "Roboto", sans-serif;
+  --fontWeightDefault: 300;
+  --fontWeightBold: 700;
+  --fontSizeDefault: 14px;
+  --fontColorDefault: #000;
+
+  --specialColor1: #001526; /*blu*/
+  --specialColor2: #eab82a; /*giallo*/
+
+  --specialFont1: ;
+  --specialFont2: ;
+
+  --fontSize1: 13px;
+  --fontSize2: 15px;
+  --fontStoreListName: 23px;
+
+  --rowMarginPadding: 6vw;
+  --rowTotal: 100%;
+
+  --logoWidth: 135px;
+  --headerHeight: 14.5vh; /*banda logo*/
+  --topAreaHeight: 10vh; /*banda search*/
+  --topAreaElWidth: 370px;
+  --mapAreaHeight: 75.5vh; /* 100  -(headerHeight + topAreaHeight)*/
+  --topAreaNEl: calc(33% - 32px); /* (100% / nEl) - 32px */
+
+  --storeListSectionWidth: 58%;
+  --storeListAsideWidth: 40%;
+
+  --mapViewWidth: 50%;
+  --listViewWidth: 50%;
+
+  --directionsPaneWidth: 50%;
+  --directionsPaneHeight: 75.5vh;
+
+  --filtersPaneHeight: 75.5vh;
+  --filtersPaneWidth: 390px;
+}
+
+html {
+  font-size: var(--fontSizeDefautl);
+  text-rendering: optimizeSpeed;
+}
+html * {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  color: var(--fontColorDefault);
+  background-color: #fff;
+  font-family: var(--fontDefault);
+  font-weight: var(--fontWeightDefault);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img,
+a {
+  border: 0;
+}
+a {
+  color: #040404;
+  text-decoration: none;
+}
+a:hover,
+a:hover * {
+  transition: all 0.3s linear;
+  transform: translateY(1) scale(1);
+  -webkit-transform: translateY(1) scale(1);
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+a,
+img {
+  outline: none;
+}
+p {
+  padding-bottom: 2%;
+  margin: 0;
+}
+b {
+  font-weight: bold;
+}
+ul {
+  margin-bottom: 2%;
+}
+ol li {
+  display: inline-block;
+  width: 100%;
+}
+input {
+  height: 20px;
+}
+select {
+  height: 30px;
+}
+label {
+  vertical-align: middle;
+}
+input,
+select {
+  height: 22px;
+}
+input,
+textarea,
+select {
+  border: none;
+  line-height: 1;
+  border: 1px solid #a8a8a8;
+  border-radius: 0;
+  padding: 0 5px;
+  background-color: #fff;
+  vertical-align: middle;
+  color: #000;
+  letter-spacing: 0.04em;
+  font-family: "Work Sans", sans-serif;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+::-webkit-input-placeholder {
+  color: #000;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+:-moz-placeholder {
+  color: #000;
+  opacity: 1;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+:-ms-input-placeholder {
+  color: #000;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+
+body * {
+  scrollbar-color: #000 #f0f1f2;
+  scrollbar-width: thin;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body *::-webkit-scrollbar {
+  width: 3px;
+}
+body *::-webkit-scrollbar-track {
+  background: #f0f1f2;
+}
+body *::-webkit-scrollbar-thumb {
+  background: #000;
+}
+body *::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/* preset */
+.displayNo {
+  display: none;
+}
+.row {
+  width: 100%;
+  float: left;
+}
+.rowMin {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  float: left;
+}
+.rowMaxW {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+}
+.mobileOnly {
+  display: none;
+}
+.alignCenter {
+  text-align: center;
+}
+.alignRight {
+  text-align: right;
+}
+.alignLeft {
+  text-align: left;
+}
+.bold {
+  font-weight: var(--fontWeightBold);
+}
+/* generale ************************************************************************************************************************************************/
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+input,
+button {
+  text-align: center;
+  background: #fff;
+  font-family: var(--fontDefault);
+  font-size: var(--fontSize2);
+  color: var(--fontColorDefault);
+  border: 2px solid var(--fontColorDefault);
+}
+
+.top .header {
+  /*height:var(--headerHeight)*/
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 110px;
+}
+.top .header .logo {
+  text-align: center;
+}
+.top .header .logo img {
+  width: var(--logoWidth);
+}
+.top .header a {
+  color: #000;
+  font-size: var(--fontSize1);
+  text-transform: lowercase;
+  font-weight: var(--fontWeightBold);
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-top: 0;
+  min-width: 75px;
+}
+.top .header .homeBtn {
+  margin-right: 35px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: right;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.top .header .backBtn {
+  margin-left: 35px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.top .header .storelocatorName {
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 0;
+  font-weight: var(--fontWeightDefault);
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--specialColor2);
+}
+
+.top .bannerTop {
+  display: table;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.top .bannerTop .colonnaInfo {
+  width: 50%;
+  background-color: #eceae7;
+  display: table-cell;
+}
+.top .bannerTop .colonnaInfo .generalInfo {
+  padding: 50px 110px;
+}
+.top .bannerTop .colonnaInfo .generalInfo h1 {
+  font-family: "Playfair Display", serif;
+  width: 100%;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 0;
+}
+.top .bannerTop .colonnaInfo .generalInfo .indirizzo {
+}
+.top .bannerTop .colonnaInfo .generalInfo .indirizzo p {
+  padding-bottom: 7px;
+  display: flex;
+  font-size: 14px;
+}
+.top .bannerTop .colonnaInfo .generalInfo .indirizzo p span {
+  display: flex;
+  margin-left: 5px;
+}
+.top .bannerTop .colonnaInfo .generalInfo .indirizzo p span img {
+  width: 17px;
+  margin-right: 5px;
+}
+.top .bannerTop .colonnaInfo .generalInfo .indirizzo button {
+  border: 0px;
+  background-color: #000;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0 60px;
+  margin-top: 25px;
+}
+.top .bannerTop .colonnaInfo .generalInfo .orariBox {
+  background-color: #fff;
+  padding: 40px;
+  margin-top: 40px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari {
+}
+.top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-top: 0;
+}
+.top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari ul {
+}
+.top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari ul li {
+  line-height: 1.2em;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+.top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari ul li.current {
+  font-weight: 600;
+}
+.top .bannerTop .foto {
+  background-image: url("../img/foto-store.jpg");
+  width: 50%;
+  background-repeat: no-repeat;
+  display: table-cell;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrap {
+  width: 100%;
+  float: none;
+  padding: 0 150px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* 
+.wrap .servizi h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+.wrap .servizi ul {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.wrap .servizi ul li {
+  display: flex;
+}
+.wrap .servizi li img {
+  max-width: 20px;
+}
+.wrap .servizi ul li h3 {
+  line-height: 1.2em;
+  padding-bottom: 7px;
+  font-size: 14px;
+  font-weight: 300;
+} */
+
+.wrap .cont-recensioni {
+  margin-top: 80px;
+}
+.wrap .cont-recensioni h2 {
+  font-size: 27px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+}
+.wrap .cont-recensioni .reviewGroup {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .cont-recensioni .reviewGroup .reviewItem {
+  background-color: #fff;
+  width: 33.3%;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  border-bottom: 1px solid #a5a4a4;
+}
+.wrap .cont-recensioni .reviewGroup .reviewItem .nome {
+  width: 100%;
+  float: left;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.wrap .cont-recensioni .reviewGroup .reviewItem ul.starsReview {
+  width: auto;
+  float: left;
+}
+.wrap .cont-recensioni .reviewGroup .reviewItem ul.starsReview li {
+  width: 14px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.wrap .cont-recensioni .reviewGroup .reviewItem p {
+  width: 100%;
+  float: left;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.wrap .cont-recensioni .reviewGroup .reviewItem .data {
+  float: left;
+  color: #696868;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.bottom .footer {
+  float: left;
+  width: 100%;
+  padding: 0 150px;
+}
+.bottom .footer p.powered {
+  width: 100%;
+  float: left;
+  letter-spacing: 0px;
+  text-align: right;
+  font-size: 0.7em;
+  padding-top: 0;
+  font-weight: 300;
+}
+.bottom .footer p.powered a {
+  width: 100%;
+  float: left;
+  text-decoration: none;
+  color: #000;
+}
+.bottom .footer p.powered strong {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bottom .footer p.powered span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f0ad4e;
+}
+.schedaErrore .bottom .footer p.powered {
+  text-align: center;
+}
+
+/*  LUIS EDIT    LUIS EDIT    LUIS EDIT    LUIS EDIT    LUIS EDIT    LUIS EDIT  */
+
+.ilNegozio_scritte {
+}
+
+.titolo {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.orariBox {
+  width: 100%;
+}
+
+.servizi {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.servizi h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.servizi ul {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.servizi li {
+  margin: 0 0px;
+  width: 200px;
+  margin: 0 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 100;
+}
+
+.servizi h3 {
+  font-weight: 300;
+}
+
+.servizi img {
+  width: 30px;
+  margin: 0 5px;
+}
+
+.collezioni {
+  margin-top: 40px;
+}
+
+.collezioni ul {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.collezioni li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #eceae7;
+  width: 260px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.brand {
+  margin-top: 70px;
+}
+
+.brand__logo2 {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.brand__logo2 img {
+  margin: 15px 20px;
+  width: 100px;
+}
+
+.center {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ilNegozio {
+  width: 40%;
+}
+
+.manager {
+  width: 50%;
+}
+
+.manager img {
+  height: 150px;
+  width: 150px;
+}
+
+.manager_scritte {
+  display: flex;
+  flex-direction: column;
+  background-color: #eceae7;
+  position: relative;
+  padding: 40px;
+  left: 20px;
+  top: 80px;
+  margin-bottom: 100px;
+}
+
+.carousel {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.freccia {
+  width: 30px;
+}
+
+.freccia:hover {
+  cursor: pointer;
+}
+
+.scheda {
+  width: 50%;
+  height: 600px;
+  text-align: center;
+  background: url(/img/cta/cta1.jpg) rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  margin: 20px;
+  background-blend-mode: multiply;
+}
+
+.scheda h2 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 140px;
+  font-weight: 700;
+}
+
+.scheda p {
+  color: white;
+  font-weight: 500;
+}
+
+.scheda button {
+  margin-top: 40%;
+  height: 50px;
+  width: 200px;
+  border: none;
+  transition: 200ms linear;
+}
+.scheda button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.sotto {
+  margin-top: 90px;
+}
+
+.concierge {
+  padding: 50px;
+  margin-top: 50px;
+  background-color: #000;
+}
+
+.white {
+  color: white;
+}
+
+.concierge h2 {
+  text-align: center;
+}
+
+.concierge_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concierge_servic {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.concierge_servic img {
+  width: 70px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.comment {
+  width: 400px;
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
+}
+
+.stars {
+  margin: 15px 0;
+}
+
+.star {
+  width: 20px;
+  margin: 0 2px;
+}
+
+.recensioni {
+  margin: 60px 0px;
+  width: 100%;
+}
+
+.center img {
+  width: 200px;
+  height: 200px;
+}
+.StoreManager_mobile {
+  display: none;
+}
+
+.Manager_content_foto {
+  margin-left: 130px;
+}
+@media only screen and (min-width: 0) and (max-width: 1740px) {
+  .orariBox {
+    width: 110%;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1500px) {
+  .comments {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1400px) {
+  .manager_scritte {
+    display: flex;
+    flex-direction: column;
+    background-color: #eceae7;
+    position: relative;
+    padding: 40px;
+    left: 10px;
+    top: 80px;
+    margin-bottom: 100px;
+  }
+  .orariBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .cont-orari {
+    margin: 10px 0;
+  }
+
+  .servizi ul {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .servizi li {
+    margin: 10px 50px;
+  }
+
+  .collezioni ul {
+    justify-content: space-around;
+  }
+
+  .collezioni li {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1280px) {
+  .collezioni li {
+    width: 100%;
+    font-size: 20px;
+  }
+  .scheda {
+    width: 100%;
+  }
+  .carousel {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1024px) {
+  .Manager_content_foto {
+    margin: 0;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ilNegozio {
+    width: 100%;
+  }
+
+  .ilNegozio h2 {
+    text-align: center;
+  }
+
+  .center img {
+    position: relative;
+    top: 50px;
+  }
+
+  .manager_scritte {
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  .bottom .footer {
+    padding: 20px 40px;
+  }
+  .bannerTop {
+    display: flex;
+    flex-direction: column;
+  }
+  .foto {
+    width: 100%;
+    display: none;
+  }
+
+  .top {
+    z-index: -10;
+  }
+
+  .bannerTop {
+    width: 100%;
+  }
+
+  .top .bannerTop .colonnaInfo {
+    position: relative;
+    top: 110px;
+    z-index: 10;
+    width: 100%;
+    background-color: #eceae7;
+    display: table-cell;
+    margin-bottom: 240px;
+  }
+
+  .top .bannerTop {
+    z-index: 10;
+    width: 80%;
+    margin: auto;
+  }
+  .store_foto {
+    background-image: url(/img/foto-store.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 30%;
+    z-index: 0;
+    position: absolute;
+  }
+
+  .servizi {
+    margin-top: 20px;
+  }
+
+  .row .top {
+    background-color: #eceae7;
+    height: 990px;
+    z-index: -10;
+  }
+
+  .top .bannerTop .colonnaInfo .generalInfo {
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .top .bannerTop .colonnaInfo .generalInfo .indirizzo {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+  .top .bannerTop .colonnaInfo .generalInfo .indirizzo p {
+    padding-bottom: 7px;
+    font-size: 14px;
+    text-align: center;
+    float: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .top .bannerTop .colonnaInfo .generalInfo .indirizzo button {
+    width: 70%;
+    margin: 40px auto;
+  }
+
+  .top .bannerTop .colonnaInfo .generalInfo .orariBox {
+    background-color: #eceae7;
+    padding: 0px;
+    margin-top: 0px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari li {
+    text-align: center;
+  }
+  .top .bannerTop .colonnaInfo .generalInfo .orariBox .cont-orari h2 {
+    text-align: center;
+  }
+
+  /*smartphone fino a ipad*/
+  .center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .ilNegozio {
+    width: 100%;
+  }
+  .manager {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  /* fisarmoniche */
+  .servizi .ul_servizi {
+    display: none;
+  }
+  .servizi .ul_collezioni {
+    display: none;
+  }
+  .brand__logo2 {
+    display: none;
+  }
+  .ilNegozio .ilNegozio_scritte {
+    display: none;
+  }
+
+  .collezioni li {
+    margin: 15px 0px;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .brand .brand__logo2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrap {
+    padding: 0 0px;
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row .top {
+    background-color: #eceae7;
+    height: 990px;
+    z-index: -10;
+    margin-bottom: 20px;
+  }
+  .StoreManager_mobile {
+    display: block;
+  }
+
+  .Manager_content {
+    display: none;
+  }
+
+  .Manager_content_foto {
+    display: none;
+    margin: 0;
+  }
+
+  .servizi h2 {
+    margin: 0;
+  }
+
+  .brand {
+    margin-top: 0px;
+  }
+  .center {
+    margin: 0;
+  }
+  .brand {
+    margin: 0;
+    padding: 0;
+  }
+
+  .titolo {
+    font-size: 1.5em;
+    text-align: start;
+  }
+  .servizi h2 {
+    text-align: start;
+    text-transform: uppercase;
+  }
+  .StoreManager_mobile {
+    text-align: start;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  .brand__logo2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .brand__logo2 img {
+    width: 120px;
+    margin: 10px;
+    padding: 0;
+    margin-left: 0px;
+  }
+  .servizi li {
+    margin: 10px 0px;
+  }
+
+  .manager_scritte {
+    left: 0;
+  }
+  .top .bannerTop .colonnaInfo .generalInfo .indirizzo button {
+    padding: 0;
+  }
+  .top .bannerTop .colonnaInfo .generalInfo {
+    padding: 40px 30px;
+  }
+  .top .bannerTop .colonnaInfo .generalInfo h1 {
+    text-align: center;
+  }
+
+  .Brand {
+    margin-top: 34px;
+  }
+
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .mobile {
+    border-bottom: #a8a8a8 solid 1px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    color: #040404;
+  }
+  .freccia {
+    display: none;
+  }
+  .concierge {
+    padding: 30px;
+  }
+  .concierge_content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .concierge_servic {
+    width: 100%;
+  }
+
+  .carousel {
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  .scheda {
+    height: 100%;
+  }
+  .scheda button {
+    margin-bottom: 20px;
+    margin-top: 35%;
+  }
+  .sotto {
+    margin-top: 20px;
+  }
+
+  .comments {
+    overflow-y: scroll;
+    width: 85%;
+    height: 630px;
+    scrollbar-width: thin;
+    scrollbar-color: red;
+  }
+
+  .recensioni {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .row .top {
+    height: 990px;
+  }
+}
