@@ -396,13 +396,14 @@ button {
   max-width: 1440px;
   margin: 0 auto;
 }
-/* 
+
 .wrap .servizi h2 {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   text-align: center;
 }
+/*
 .wrap .servizi ul {
   display: flex;
   align-items: baseline;
@@ -509,7 +510,7 @@ button {
 }
 
 .titolo {
-  font-size: 1.5em;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   text-align: center;
@@ -545,7 +546,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .servizi h3 {
@@ -581,7 +582,7 @@ button {
 }
 
 .brand {
-  margin-top: 70px;
+  margin-top: 55px;
 }
 
 .brand__logo2 {
