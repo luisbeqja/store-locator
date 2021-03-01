@@ -14,87 +14,78 @@ const scheda2 = document.querySelector(".donna");
 const scheda4 = document.querySelector(".donna2");
 const scheda3 = document.querySelector(".uomo2");
 
+const scroll = document.querySelector(".scroll");
+const scroll2 = document.querySelector(".scroll2");
+
+//ScrollAnimato
+//ScrollAnimato
+//ScrollAnimato
+let i = 0;
 frecciaSx.addEventListener("click", function () {
-  if (scheda1.classList.contains("hidden")) {
-    scheda1.classList.remove("hidden");
-    scheda1.classList.add("Ffx");
-    scheda3.classList.add("hidden");
+  if (i < 1000) {
+    i = i + 500;
+    scroll.scrollTo({
+      left: i,
+      behavior: "smooth",
+    });
   } else {
-    scheda1.classList.add("hidden");
-    scheda3.classList.remove("hidden");
-    scheda3.classList.add("Fdx");
+    scroll.scrollTo({
+      left: -i,
+      behavior: "smooth",
+    });
+    i = 0;
   }
 });
 
 frecciaDx.addEventListener("click", function () {
-  if (scheda2.classList.contains("hidden")) {
-    scheda2.classList.remove("hidden");
-    scheda2.classList.add("Ffx");
-    scheda4.classList.add("hidden");
+  if (i >= 500) {
+    i = i - 500;
+    scroll.scrollTo({
+      left: i,
+      behavior: "smooth",
+    });
   } else {
-    scheda2.classList.add("hidden");
-    scheda4.classList.remove("hidden");
-    scheda4.classList.add("Fdx");
+    scroll.scrollTo({
+      left: +i,
+      behavior: "smooth",
+    });
+    i = 0;
   }
 });
 
-// FOTO
-// FOTO
-// FOTO
-// frecciaSx2.addEventListener("click", function () {
-//   schedaUomoFoto.classList.toggle("hidden");
-//   schedaDonnaFoto.classList.toggle("hidden");
-//   schedaDonna2Foto.classList.toggle("hidden");
-//   schedaUomo2Foto.classList.toggle("hidden");
+// Foto
+// Foto
+// Foto
 
-//   schedaDonna2Foto.classList.add("Ffx");
-//   schedaUomo2Foto.classList.add("Ffx");
-//   schedaUomoFoto.classList.add("Ffx");
-//   schedaDonnaFoto.classList.add("Ffx");
-
-//   schedaDonna2Foto.classList.remove("Fdx");
-//   schedaUomo2Foto.classList.remove("Fdx");
-//   schedaUomoFoto.classList.remove("Fdx");
-//   schedaDonnaFoto.classList.remove("Fdx");
-// });
-
-// frecciaDx2.addEventListener("click", function () {
-//   schedaUomoFoto.classList.toggle("hidden");
-//   schedaDonnaFoto.classList.toggle("hidden");
-//   schedaDonna2Foto.classList.toggle("hidden");
-//   schedaUomo2Foto.classList.toggle("hidden");
-
-//   schedaDonna2Foto.classList.add("Fdx");
-//   schedaUomo2Foto.classList.add("Fdx");
-//   schedaUomoFoto.classList.add("Fdx");
-//   schedaDonnaFoto.classList.add("Fdx");
-
-//   schedaDonna2Foto.classList.remove("Ffx");
-//   schedaUomo2Foto.classList.remove("Ffx");
-//   schedaUomoFoto.classList.remove("Ffx");
-//   schedaDonnaFoto.classList.remove("Ffx");
-// });
-
+let x = 0;
 frecciaSx2.addEventListener("click", function () {
-  if (schedaUomoFoto1.classList.contains("hidden")) {
-    schedaUomoFoto1.classList.remove("hidden");
-    schedaUomoFoto1.classList.add("Ffx");
-    schedaDonna2Foto3.classList.add("hidden");
+  if (x < 1000) {
+    x = x + 500;
+    scroll2.scrollTo({
+      left: x,
+      behavior: "smooth",
+    });
   } else {
-    schedaUomoFoto1.classList.add("hidden");
-    schedaDonna2Foto3.classList.remove("hidden");
-    schedaDonna2Foto3.classList.add("Fdx");
+    scroll2.scrollTo({
+      left: -x,
+      behavior: "smooth",
+    });
+    x = 0;
   }
 });
 
 frecciaDx2.addEventListener("click", function () {
-  if (schedaDonnaFoto2.classList.contains("hidden")) {
-    schedaDonnaFoto2.classList.remove("hidden");
-    schedaDonnaFoto2.classList.add("Ffx");
-    schedaUomo2Foto4.classList.add("hidden");
+  if (x >= 500) {
+    x = x - 500;
+    scroll2.scrollTo({
+      left: x,
+      behavior: "smooth",
+    });
   } else {
-    schedaDonnaFoto2.classList.add("hidden");
-    schedaUomo2Foto4.classList.remove("hidden");
-    schedaUomo2Foto4.classList.add("Fdx");
+    scroll2.scrollTo({
+      left: +x,
+      behavior: "smooth",
+    });
+    i = 0;
   }
 });
