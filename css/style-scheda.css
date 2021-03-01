@@ -9,7 +9,17 @@
 /*variabili*/
 
 .hidden {
+  animation: hiddena 2s;
   display: none;
+}
+
+@keyframes hiddena {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
 }
 
 :root {
@@ -776,6 +786,38 @@ button {
 .carousel_due {
   display: flex;
   width: 100%;
+}
+
+.Fdx {
+  animation: F-dx 2s;
+}
+
+.Ffx {
+  animation: F-fx 2s;
+}
+
+@keyframes F-dx {
+  from {
+    transform: translate(50%);
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+
+    transform: translate(0);
+  }
+}
+
+@keyframes F-fx {
+  from {
+    transform: translate(-50%);
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+
+    transform: translate(0);
+  }
 }
 
 .carousel_foto {
