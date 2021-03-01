@@ -13,7 +13,7 @@ let ManagerFoto = document.querySelector(".Manager_content_foto");
 
 let s = window.innerWidth;
 
-if (s < 768) {
+if (s <= 768) {
   //primo
   ServizziUl.style.display = "none";
   Servizi.addEventListener("click", () => {

@@ -390,10 +390,10 @@ button {
 }
 
 .wrap {
-  width: 100%;
+  width: 1300px;
   float: none;
-  padding: 0 150px;
-  max-width: 1440px;
+  padding: 0 0px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -403,6 +403,17 @@ button {
   letter-spacing: 0.7px;
   text-align: center;
 }
+
+.servizi ul {
+  margin: auto;
+  display: flex;
+  width: 100%;
+}
+
+.servizi li {
+  margin: 420px 0px;
+}
+
 /*
 .wrap .servizi ul {
   display: flex;
@@ -539,9 +550,8 @@ button {
 }
 
 .servizi li {
-  margin: 0 0px;
   width: 200px;
-  margin: 0 10px;
+  margin: 0 30px;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -588,7 +598,7 @@ button {
 .brand__logo2 {
   flex-wrap: wrap;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
 }
 .brand__logo2 img {
@@ -599,7 +609,7 @@ button {
 .center {
   margin-top: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .ilNegozio {
@@ -621,8 +631,10 @@ button {
   background-color: #eceae7;
   position: relative;
   padding: 40px;
-  left: 20px;
-  top: 80px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  left: 0px;
+  top: 65px;
   margin-bottom: 100px;
 }
 
@@ -760,6 +772,18 @@ button {
 .Manager_content_foto {
   margin-left: 130px;
 }
+
+.carousel_due {
+  display: flex;
+  width: 100%;
+}
+
+.carousel_foto {
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
 @media only screen and (min-width: 0) and (max-width: 1740px) {
   .orariBox {
     width: 110%;
@@ -768,6 +792,9 @@ button {
 
 @media only screen and (min-width: 0) and (max-width: 1500px) {
   .comments {
+    width: 100%;
+  }
+  .wrap {
     width: 100%;
   }
 }
@@ -794,8 +821,8 @@ button {
   .servizi ul {
     margin: auto;
     display: flex;
-    justify-content: center;
     width: 100%;
+    justify-content: space-between;
   }
 
   .servizi li {
@@ -812,8 +839,12 @@ button {
 }
 
 @media only screen and (min-width: 0) and (max-width: 1280px) {
-  .collezioni li {
+  .servizi ul {
+    justify-content: space-around;
     width: 100%;
+  }
+  .collezioni li {
+    width: 40%;
     font-size: 20px;
   }
   .scheda {
@@ -822,9 +853,20 @@ button {
   .carousel {
     width: 100%;
   }
+
+  .scheda_2 {
+    width: 100%;
+  }
+  .scheda {
+    width: 45%;
+    height: 100%;
+  }
 }
 
-@media only screen and (min-width: 0) and (max-width: 1024px) {
+@media only screen and (min-width: 0) and (max-width: 1023px) {
+  .brand__logo2 {
+    justify-content: start;
+  }
   .Manager_content_foto {
     margin: 0;
   }
@@ -836,7 +878,7 @@ button {
   }
 
   .ilNegozio {
-    width: 100%;
+    width: 90%;
   }
 
   .ilNegozio h2 {
@@ -851,9 +893,33 @@ button {
   .manager_scritte {
     position: relative;
   }
+  .collezioni li {
+    width: 36%;
+  }
+
+  .scheda_2 {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 0) and (max-width: 768px) {
+  .carousel_foto {
+    flex-direction: column;
+  }
+  .scheda {
+    width: 100%;
+    margin: 0;
+  }
+  .carousel_due {
+    flex-direction: column;
+  }
+
+  .servizi ul {
+    margin: 0;
+    display: block;
+    width: 100%;
+    justify-content: center;
+  }
   .wrap .servizi h2 {
     text-align: start;
   }
@@ -863,10 +929,6 @@ button {
   .bannerTop {
     display: flex;
     flex-direction: column;
-  }
-  .foto {
-    width: 100%;
-    display: none;
   }
 
   .top {
@@ -972,6 +1034,7 @@ button {
   }
 
   /* fisarmoniche */
+
   .servizi .ul_servizi {
     display: none;
   }
@@ -987,6 +1050,7 @@ button {
 
   .collezioni li {
     margin: 15px 0px;
+    width: 100%;
   }
 
   .brand {
@@ -1069,7 +1133,13 @@ button {
     margin-left: 0px;
   }
   .servizi li {
+    width: 100%;
     margin: 10px 0px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
   }
 
   .manager_scritte {
@@ -1141,10 +1211,23 @@ button {
   .recensioni {
     margin: 0;
   }
+
+  .ul_servizi li {
+    text-align: start;
+    justify-content: start;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .row .top {
     height: 990px;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 400px) {
+  .row .top {
+    height: 1060px;
   }
 }
