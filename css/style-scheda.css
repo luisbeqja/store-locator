@@ -707,7 +707,7 @@ button {
   margin: 0 20px;
   display: flex;
   overflow-x: auto;
-  width: 90%;
+  width: 1100px;
   justify-content: start;
   scroll-snap-align: start;
   overflow-x: auto;
@@ -732,7 +732,7 @@ button {
 }
 
 .scroll .scheda {
-  width: 47%;
+  width: 49%;
 }
 
 .scroll_item {
@@ -743,7 +743,7 @@ button {
   margin: 0 20px;
   display: flex;
   overflow-x: auto;
-  width: 90%;
+  width: 1100px;
   justify-content: start;
   scroll-snap-align: start;
   overflow-x: auto;
@@ -1346,6 +1346,13 @@ button {
   .schedaUomo2Foto,
   .schedaDonna2Foto {
     display: none;
+  }
+
+  .scroll {
+    width: 90%;
+  }
+  .scroll2 {
+    width: 90%;
   }
 }
 
